@@ -1,0 +1,317 @@
+@charset "EUC-KR";
+
+html {
+height: 101%;
+}
+
+.graycal{
+	color:#58000;
+}
+.menu_of_left {
+width:151px;
+vertical-align:top;
+}
+
+.tdmenutable{
+border-top:1px solid #60000;
+border-left:1px solid #BBC5C6;
+border-right:1px solid #BBC5C6;
+border-bottom:1px solid #BBC5C6;
+margin-top:10px;
+width:150;
+background:#f5f5f5;
+}
+
+.tdmenutitle{
+	width:151px;
+	font-size:10pt;
+	font-weight:bold;
+	color:#58000;
+	font-family:Tahoma, Verdana;
+	border:1px solid #f5f5f5;
+	cursor:hand;
+	padding:1px;
+	padding-right:0px;
+	padding-top:0px;
+	padding-bottom:0px;
+	padding-left:5px;
+	text-decoration:none;
+	border-top:8px solid #BBC5C6;
+}
+
+.outlineofheader {
+width:986px;
+margin:0;
+padding:0;
+background:white;
+}
+
+#site_head {
+	BACKGROUND-POSITION: right center;
+	BACKGROUND-IMAGE: url(./images/slogan_bg.gif); 
+	BACKGROUND-REPEAT: no-repeat;
+	POSITION: relative; 
+	HEIGHT: 65px; 
+	BACKGROUND-COLOR: #ffffff;
+	TEXT-ALIGN: left
+}
+.logo {
+	LEFT: 13px; POSITION: absolute; TOP: 0px
+}
+.slogan {
+	FONT-WEIGHT: bold; 
+	FONT-SIZE: 18px; 
+	MARGIN: 0em 0em 0em 7em; 
+	COLOR: #dadada; 
+	LINE-HEIGHT: 3.5em
+}
+
+.hindawi_links {
+	PADDING-RIGHT: 15px; BACKGROUND-POSITION: left 50%; MARGIN-LEFT: 450px; COLOR: #ffffff; LINE-HEIGHT: 20px; BACKGROUND-REPEAT: no-repeat; HEIGHT: 20px; BACKGROUND-COLOR: #328f47; TEXT-ALIGN: right
+}
+.hindawi_links A {
+	COLOR: #ffffff; TEXT-DECORATION: none
+}
+.hindawi_links A:hover {
+	COLOR: #ffffff
+}
+.hindawi_links UL {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px; LIST-STYLE-TYPE: none
+}
+
+.hindawi_links LI {
+	DISPLAY: inline; PADDING-LEFT: 15px
+}
+#banner {
+	BORDER-TOP: #ffffff 1px solid; BORDER-BOTTOM: #ffffff 1px solid; HEIGHT: 132px
+}
+
+/* 전체 기본 설정 */
+body {
+	margin-top: 1px;
+	margin-left: 0px;
+	margin-right: 0px;
+	margin-bottom: 1px;
+	font-size: 9pt;
+	font-family: Tahoma, Arial;
+	line-height: 140%;
+	color: #777777;
+}
+
+/* 기본 테이블 설정 부분 */
+table { 
+	border: none;
+	border-width:0px;
+	
+	border-color:#a0a0a0;
+	font-size: 9pt;
+	font-family: Verdana, Arial;
+	line-height: 160%;
+	color: #02040;
+	padding: 0px 0px 0px 0px;
+}
+
+/* 메뉴 테이블 설정 부분 */
+td.tdmenunohand{
+	width:151px;
+	font-size:9pt;
+	font-family:Tahoma, Verdana;
+	border-width:0px;
+	border-top-width:1px;
+	border-style:dotted;
+	border-color:#a0a0a0;
+	padding:1px;
+	padding-right:0px;
+	text-decoration:none;
+}
+td.tdmenu {
+	width:170px;
+	font-size:8pt;
+	font-family:Tahoma, Verdana;
+	border:1px solid #e7e7e7;
+	cursor:hand;
+	padding:1px;
+	padding-right:0px;
+	padding-top:0px;
+	padding-bottom:0px;
+	padding-left:5px;
+	text-decoration:none;
+	line-height:160%;
+	border-bottom:1px dotted gray;
+
+}
+td.tdmenu a{
+	color:#000000;
+	text-decoration:none;
+}
+td.tdmenuover{
+	width:170px;
+	font-size:8pt;
+	font-family:Tahoma, Verdana;
+	border:1px solid #dbe0e4;
+	cursor:hand;
+	background-color: #dbe0e4;
+	padding:1px;
+	padding-right:0px;
+	padding-top:0px;
+	padding-bottom:0px;
+	padding-left:5px;
+	text-decoration:none;
+	line-height:160%;
+	border-bottom:1px dotted gray;
+}
+td.tdmenuover a{
+	color:#3263AE;
+	text-decoration:none;
+}
+
+td.tdmenuover2{
+	width:400px;
+	font-size:9pt;
+	font-family:Tahoma, Verdana;
+	border-width:0px;
+	border-top-width:1px;
+	border-style:dotted;
+	border-color:#a0a0a0;
+	cursor:hand;
+	background-color: #e0e0e0;
+	padding:1px;
+	padding-left:3px;
+	padding-right:0px;
+	text-decoration:none;
+}
+td.tdmenuover2 a{
+	color:#3263AE;
+	text-decoration:none;
+}
+
+
+/* 링크 기본 설정 부분 */
+a.asty:link {color: #408CB3;font-size:9pt;font-family:Tahoma;text-decoration:none;}
+a.asty:hover {color: #cc0000;font-size:9pt;font-family:Tahoma;text-decoration:underline;}
+a.asty:visited {color: #408CB3;font-size:9pt;font-family:Tahoma;text-decoration:none;}
+
+/* 탑 메뉴 링크 설정 부분 */
+a.topmenu:link {color:#FFFFFF; font-size:9pt;font-family:Tahoma; text-decoration:none;font-weight:bold}
+a.topmenu:hover {color:#c0c0c0; font-size:9pt; font-family:Tahoma; text-decoration:none;font-weight:bold}
+a.topmenu:visited {color:#FFFFFF; font-size:9pt;font-family:Tahoma; text-decoration:none;font-weight:bold}
+
+/* 메인 컨텐트 설정 부분 */
+
+.maincontent{
+	margin-top: 0px;
+	margin-left: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	padding:0px;
+	padding-top:0px;
+	min-height: 300px;
+	font-size: 9pt;
+	font-family: Tahoma, Arial;
+	line-height: 140%;
+	color: #020400;
+	background-image: url("./bgr_body.jpg");
+	background-repeat:repeat-x;
+}
+
+.maincontent a:link{color: #408CB3;font-size:9pt;font-family:Tahoma;text-decoration:none;}
+.maincontent a:hover {color: #cc0000;font-size:9pt;font-family:Tahoma;text-decoration:underline;}
+.maincontent a:visited{color: #408CB3;font-size:9pt;font-family:Tahoma;text-decoration:none;}
+
+/* 어드민 컨텐트 설정 */
+
+
+admincontent{
+	margin-top: 1px;
+	margin-left: 0px;
+	margin-right: 0px;
+	margin-bottom: 1px;
+	font-size: 9pt;
+	font-family: Tahoma, Arial;
+	line-height: 140%;
+	color: #777777;
+	text-align: justify;
+	margin:20px;
+}
+
+.admincontent a:link{color: #408CB3;font-size:9pt;font-family:Tahoma;text-decoration:none;}
+.admincontent a:hover {color: #cc0000;font-size:9pt;font-family:Tahoma;text-decoration:underline;}
+.admincontent a:visited{color: #408CB3;font-size:9pt;font-family:Tahoma;text-decoration:none;}
+
+
+/* 언더라인 */
+.underline01 { 
+	border-width:0px;
+	border-bottom-width:2px;
+	border-style:solid;
+	border-color:#408CB3; 
+}
+
+.underline02 {
+	
+	border-width:0px;
+	border-bottom-width:4px;
+	border-style:double;
+	border-color:#cc0000; 
+}
+
+
+
+
+.underlinesubmit { border-width:0px;border-bottom-width:1px;border-style:dotted;border-color:black}
+.underlinesubmit02 { border-width:0px;border-bottom-width:1px;border-top-width:1px;border-style:dotted;border-color:black}
+
+/* 스페이스 */
+.space50 {
+	border-width: 0px;
+	padding-left: 50px;
+}
+
+.btn01 {font-size:8pt;color:#3263AE;font-family:arial;width:70px;background-color:white;border-width:1px;border-style:solid;border-color:#97AED3;cursor:hand;}
+.btn02 {font-size:8pt;color:#3263AE;width:400px;background-color:white;border-width:1px;border-style:solid;border-color:#97AED3;cursor:hand;}
+.box01 {font-size:8pt;color:#c0c0c0:font-family:Verdna;border-width:1px;border-style:solid;width:450px;}
+.box02 {font-size:9pt;color:#c0c0c0:font-family:Verdna;border-width:1px;border-style:solid;width:450px;}
+
+.btn_normal {
+	font-size:9pt;
+	height:25px;
+	font-family:Verdana;
+	color:#555555;
+	border-width:1px;
+	border-color:#A0A0A0;
+	border-style:solid;
+	background-color:#ffffff;
+}
+
+TD { 
+font-family: Verdana, Arial, Helvetica, sans-serif;
+font-size: 10px;
+color: #000000;
+}
+
+.navcolon {
+font-size: 12px; 
+font-family: Verdana, Arial, Helvetica, sans-serif;
+font-style: normal;
+color: #adbfcd;
+font-weight: bold;
+line-height: 15px;
+}
+
+A.navlink:link {FONT-WEIGHT: bold; FONT-SIZE: 11px; COLOR: brown; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; TEXT-DECORATION: none
+		}
+A.navlink:visited {FONT-WEIGHT: bold; FONT-SIZE: 11px; COLOR: brown; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; TEXT-DECORATION: none
+		}
+A.navlink:active {FONT-WEIGHT: bold; FONT-SIZE: 11px; COLOR: #002d54; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; TEXT-DECORATION: none
+		}
+A.navlink:hover {FONT-WEIGHT: bold; FONT-SIZE: 11px; COLOR: #002d54; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; TEXT-DECORATION: none
+		}	
+		
+A.navlink02:link {FONT-WEIGHT: bold; FONT-SIZE: 11px; COLOR: #012d50; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; TEXT-DECORATION: none
+		}
+A.navlink02:visited {FONT-WEIGHT: bold; FONT-SIZE: 11px; COLOR: #012d50; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; TEXT-DECORATION: none
+		}
+A.navlink02:active {FONT-WEIGHT: bold; FONT-SIZE: 11px; COLOR: #ffffff; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; TEXT-DECORATION: none
+		}
+A.navlink02:hover {FONT-WEIGHT: bold; FONT-SIZE: 11px; COLOR: #ffffff; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; TEXT-DECORATION: none
+		}			

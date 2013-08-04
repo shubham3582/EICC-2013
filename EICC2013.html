@@ -1,0 +1,657 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"><head>
+<title>EICC 2013</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta http-equiv="language" content="en-us" />
+<link rel="shortcut icon" href="./Proceedings/favicon.png" type="image/png"/>
+<script type="text/javascript">
+<!--
+/* http://www.alistapart.com/articles/zebratables/ */
+function removeClassName (elem, className) {
+	elem.className = elem.className.replace(className, "").trim();
+}
+
+function addCSSClass (elem, className) {
+	removeClassName (elem, className);
+	elem.className = (elem.className + " " + className).trim();
+}
+
+String.prototype.trim = function() {
+	return this.replace( /^\s+|\s+$/, "" );
+}
+
+function stripedTable() {
+	if (document.getElementById && document.getElementsByTagName) {  
+		var allTables = document.getElementsByTagName('table');
+		if (!allTables) { return; }
+
+		for (var i = 0; i < allTables.length; i++) {
+			if (allTables[i].className.match(/[\w\s ]*scrollTable[\w\s ]*/)) {
+				var trs = allTables[i].getElementsByTagName("tr");
+				for (var j = 0; j < trs.length; j++) {
+					removeClassName(trs[j], 'alternateRow');
+					addCSSClass(trs[j], 'normalRow');
+				}
+				for (var k = 0; k < trs.length; k += 2) {
+					removeClassName(trs[k], 'normalRow');
+					addCSSClass(trs[k], 'alternateRow');
+				}
+			}
+		}
+	}
+}
+
+window.onload = function() { stripedTable(); }
+-->
+</script>
+<style type="text/css">
+<!--
+/* Terence Ordona, portal[AT]imaputz[DOT]com         */
+/* http://creativecommons.org/licenses/by-sa/2.0/    */
+
+/* begin some basic styling here                     */
+
+  body {
+  background-image: url("./Proceedings/back.jpg");
+  background-repeat:no-repeat;
+  background-attachment:fixed;
+   font-family:verdana;
+  opacity:0.65;
+   filter:alpha(opacity=40); /* For IE8 and earlier */
+  }
+
+table, td, a {
+	color: #000;
+	font: normal normal 12px Verdana, Geneva, Arial, Helvetica, sans-serif;
+	
+}
+
+h1 {
+	font: normal normal 18px Verdana, Geneva, Arial, Helvetica, sans-serif;
+	margin: 0 0 5px 0
+}
+
+h2 {
+	font: normal normal 16px Verdana, Geneva, Arial, Helvetica, sans-serif;
+	margin: 0 0 5px 0
+}
+
+h3 {
+	font: normal normal 13px Verdana, Geneva, Arial, Helvetica, sans-serif;
+	color: #008000;
+	margin: 0 0 15px 0
+}
+/* end basic styling                                 */
+
+/* define height and width of scrollable area. Add 16px to width for scrollbar          */
+div.tableContainer {
+	clear: both;
+	border: 1px solid #963;
+	height: 420px;
+	overflow: auto;
+	width: 800px;
+	position:absolute;
+	top:240px;
+	left:150px;
+}
+
+/* Reset overflow value to hidden for all non-IE browsers. */
+html>body div.tableContainer {
+	overflow: hidden;
+	width: 1024px
+}
+
+/* define width of table. IE browsers only                 */
+div.tableContainer table {
+	float: left;
+	width: 1008px
+}
+
+/* define width of table. Add 16px to width for scrollbar.           */
+/* All other non-IE browsers.                                        */
+html>body div.tableContainer table {
+	width: 1024px
+}
+
+/* set table header to a fixed position. WinIE 6.x only                                       */
+/* In WinIE 6.x, any element with a position property set to relative and is a child of       */
+/* an element that has an overflow property set, the relative value translates into fixed.    */
+/* Ex: parent element DIV with a class of tableContainer has an overflow property set to auto */
+thead.fixedHeader tr {
+	position: relative
+}
+
+/* set THEAD element to have block level attributes. All other non-IE browsers            */
+/* this enables overflow to work on TBODY element. All other non-IE, non-Mozilla browsers */
+html>body thead.fixedHeader tr {
+	display: block
+}
+
+/* make the TH elements pretty */
+thead.fixedHeader th {
+	background: #C96;
+	border-left: 1px solid #EB8;
+	border-right: 1px solid #B74;
+	border-top: 1px solid #EB8;
+	font-weight: normal;
+	padding: 4px 3px;
+	text-align: left
+}
+
+/* make the A elements pretty. makes for nice clickable headers                */
+thead.fixedHeader a, thead.fixedHeader a:link, thead.fixedHeader a:visited {
+	color: #FFF;
+	display: block;
+	text-decoration: none;
+	width: 100%
+}
+
+/* make the A elements pretty. makes for nice clickable headers                */
+/* WARNING: swapping the background on hover may cause problems in WinIE 6.x   */
+thead.fixedHeader a:hover {
+	color: #FFF;
+	display: block;
+	text-decoration: underline;
+	width: 100%
+}
+
+/* define the table content to be scrollable                                              */
+/* set TBODY element to have block level attributes. All other non-IE browsers            */
+/* this enables overflow to work on TBODY element. All other non-IE, non-Mozilla browsers */
+/* induced side effect is that child TDs no longer accept width: auto                     */
+html>body tbody.scrollContent {
+	display: block;
+	height: 400px;
+	overflow: auto;
+	width: 100%
+}
+
+/* make TD elements pretty. Provide alternating classes for striping the table */
+/* http://www.alistapart.com/articles/zebratables/                             */
+tbody.scrollContent td, tbody.scrollContent tr.normalRow td {
+	background: #FFF;
+	border-bottom: none;
+	border-left: none;
+	border-right: 1px solid #CCC;
+	border-top: 1px solid #DDD;
+	padding: 2px 3px 3px 4px
+}
+
+tbody.scrollContent tr.alternateRow td {
+	background: #EEE;
+	border-bottom: none;
+	border-left: none;
+	border-right: 1px solid #CCC;
+	border-top: 1px solid #DDD;
+	padding: 2px 3px 3px 4px
+}
+
+/* define width of TH elements: 1st, 2nd, and 3rd respectively.          */
+/* Add 16px to last TH for scrollbar padding. All other non-IE browsers. */
+/* http://www.w3.org/TR/REC-CSS2/selector.html#adjacent-selectors        */
+html>body thead.fixedHeader th {
+	width: 100px
+}
+
+html>body thead.fixedHeader th + th {
+	width: 400px
+}
+
+html>body thead.fixedHeader th + th + th {
+	width: 500px
+}
+
+/* define width of TD elements: 1st, 2nd, and 3rd respectively.          */
+/* All other non-IE browsers.                                            */
+/* http://www.w3.org/TR/REC-CSS2/selector.html#adjacent-selectors        */
+html>body tbody.scrollContent td {
+	width: 100px
+}
+
+html>body tbody.scrollContent td + td {
+	width: 400px
+}
+
+html>body tbody.scrollContent td + td + td {
+	width: 500px
+}
+-->
+</style>
+<embed name="lostmojo" src="./Proceedings/music.mp3" loop="true" hidden="true" autostart="true">
+
+</head><body>
+<div style="position:absolute;top:200px;"></div>
+<div id="tableContainer" class="tableContainer">
+<table border="0" cellpadding="0" cellspacing="0" width="100%" class="scrollTable" >
+<thead class="fixedHeader">
+	<tr>
+		<th><a href="#">Serial Number</a></th>
+		<th><a href="#">Paper Title</a></th>
+		<th><a href="#">Authors</a></th>
+	</tr>
+</thead>
+<tbody class="scrollContent">
+	<tr>
+<td width = 10% ><center> </center> </td>
+<td width = 60% ><a href="./Proceedings/Preface.pdf" target="_blank">Preface </td>
+<td width = 30% >Team EICC
+ </td>
+</tr>
+<tr>
+<td width = 10% ><center>1</center> </td>
+<td width = 60% ><a href="./Proceedings/A brief survey of mutual exclusion algorithms in cloud environment.pdf" target="_blank">A brief survey of mutual exclusion algorithms in cloud environment </td><td width = 30% >Abhishek Swaroop, Awadhesh Kumar Singh </td>
+</tr>
+<tr>
+<td width = 10% ><center>2</center> </td>
+<td width = 60% ><a href="./Proceedings/Mutual Exclusion with Dynamic Request Set in Ad-hoc Network.pdf" target="_blank">Mutual Exclusion with Dynamic Request Set in Ad-hoc Network </td><td width = 30% >Ashish Khanna, Awadhesh Kumar Singh, Abhishek Swaroop </td>
+</tr>
+<tr>
+<td width = 10% ><center>3</center> </td>
+<td width = 60% ><a href="./Proceedings/Test Estimation in agile.pdf" target="_blank">Testing Estimation in Agile </td><td width = 30% >Monika Dixit, Karan Yadav </td>
+</tr>
+<tr>
+<td width = 10% ><center>4</center> </td>
+<td width = 60% ><a href="./Proceedings/Limits of software quality assurance and software developer in the project life cycle.pdf" target="_blank">Limits of software quality assurance and software developer in the project life cycle </td><td width = 30% >Sumaiya Faizyab </td>
+</tr>
+<tr>
+<td width = 10% ><center>5</center> </td>
+<td width = 60% ><a href="./Proceedings/Surveillance UAV.pdf" target="_blank">Surveillance UAV </td><td width = 30% >Gulshan Kumar Dubey, Raunak Agrawal, Shalini Asija, Sharad Sharma, Varun Tyagi </td>
+</tr>
+<tr>
+<td width = 10% ><center>6</center> </td>
+<td width = 60% ><a href="./Proceedings/Design and Analysis of Excitation Techniques Used in Microstrip Patch Antenna.pdf" target="_blank">Design and Analysis of Excitation Techniques Used in Microstrip Patch Antenna </td><td width = 30% >Priyam Agrawal, Shradha Sanal, Gaurav Gulati, Arvind Kumar, Neeraj kumar </td>
+</tr>
+<tr>
+<td width = 10% ><center>7</center> </td>
+<td width = 60% ><a href="./Proceedings/Analysis and Design of MOSFET based Amplieer in Diferent Confgurations.pdf" target="_blank">Analysis and Design of MOSFET based Amplieer in Diferent Confgurations </td><td width = 30% >Paritosh Vyas, Tarun Singh Yadav, Sunil Kumar </td>
+</tr>
+<tr>
+<td width = 10% ><center>8</center> </td>
+<td width = 60% ><a href="./Proceedings/Reusability Attribute Model for Aspect Oriented Software Product Line Components.pdf" target="_blank">Reusability Attribute Model for Aspect Oriented Software Product Line Components  </td><td width = 30% >Akshay Sawhney, Dev Gupta, Mohit Sharma </td>
+</tr>
+<tr>
+<td width = 10% ><center>9</center> </td>
+<td width = 60% ><a href="./Proceedings/Data Security in Cloud Computing Using S-IDEA.pdf" target="_blank">Data Security in Cloud Computing Using S-IDEA </td><td width = 30% >Kanupriya Singh, Anmol Agrawal, Darshika Shankhwar </td>
+</tr>
+<tr>
+<td width = 10% ><center>10</center> </td>
+<td width = 60% ><a href="./Proceedings/Proposed -Way Handshake Protocol For Authentication In Wpa2.pdf" target="_blank">Proposed -Way Handshake Protocol For Authentication In Wpa2 </td><td width = 30% >Pawan Kumar, Sandeep Sharma </td>
+</tr>
+<tr>
+<td width = 10% ><center>11</center> </td>
+<td width = 60% ><a href="./Proceedings/How Magnetic Levitation Train Works.pdf" target="_blank">How Magnetic Levitation Train Works </td><td width = 30% > Abhishek Srivastava </td>
+</tr>
+<tr>
+<td width = 10% ><center>12</center> </td>
+<td width = 60% ><a href="./Proceedings/Color Sensing.pdf" target="_blank">Color Sensing  </td><td width = 30% >Heena Ahuja, Aarti Suri </td>
+</tr>
+<tr>
+<td width = 10% ><center>13</center> </td>
+<td width = 60% ><a href="./Proceedings/Design And Development Mechanisms For Software Quality.pdf" target="_blank">Design And Development Mechanisms For Software Quality </td><td width = 30% >Ajay Kumar, Manisha Manjul </td>
+</tr>
+<tr>
+<td width = 10% ><center>14</center> </td>
+<td width = 60% ><a href="./Proceedings/Driverless Intelligent Metro Train.pdf" target="_blank">Driverless Intelligent Metro Train </td><td width = 30% >Ashish Shrivastava, Aarti Varshney, Neha Anand, Pallavi Tewari,  Pragya Jain </td>
+</tr>
+<tr>
+<td width = 10% ><center>15</center> </td>
+<td width = 60% ><a href="./Proceedings/Software Testing An Approach using Cloud Computing.pdf" target="_blank">Software Testing:  An Approach using Cloud Computing </td><td width = 30% >Neha Johari, Amit Srivastava </td>
+</tr>
+<tr>
+<td width = 10% ><center>16</center> </td>
+<td width = 60% ><a href="./Proceedings/A Survey of Load Balancing Mechanisms in Distributed Web Server Systems.pdf" target="_blank">A Survey of Load Balancing Mechanisms in Distributed Web Server Systems </td><td width = 30% >Shyam Bhati , Karan Singh , Sandeep Sharma </td>
+</tr>
+<tr>
+<td width = 10% ><center>17</center> </td>
+<td width = 60% ><a href="./Proceedings/New Application Areas of Search Engines.pdf" target="_blank">New Application Areas of Search Engines </td><td width = 30% >Archana Verma, Prof(Dr) Ajay Rana </td>
+</tr>
+<tr>
+<td width = 10% ><center>18</center> </td>
+<td width = 60% ><a href="./Proceedings/A REAL TIME HAND GESTURE RECOGNITION.pdf" target="_blank">A  Real Time Hand Gesture Recognition </td><td width = 30% >Vishu Arora ,Sandeep yadav, Pushpendra kumar </td>
+</tr>
+<tr>
+<td width = 10% ><center>19</center> </td>
+<td width = 60% ><a href="./Proceedings/Criteria for Scheduling Task Graph on Multiprocessor.pdf" target="_blank">Criteria for Scheduling Task Graph on Multiprocessor </td><td width = 30% >Dharmveer Kr Yadav Sandeep Singh Amit Kumar Tripathi </td>
+</tr>
+<tr>
+<td width = 10% ><center>20</center> </td>
+<td width = 60% ><a href="./Proceedings/A Study on Performance Analysis of Web Services.pdf" target="_blank">A Study on Performance Analysis of Web Services </td><td width = 30% >Nitin Kumar Verma    Neeta Singh </td>
+</tr>
+<tr>
+<td width = 10% ><center>21</center> </td>
+<td width = 60% ><a href="./Proceedings/Technique for Blind Image Processing Using BIQI.pdf" target="_blank">Technique for Blind Image Processing Using BIQI </td><td width = 30% >Parul Satsangi, Sagar Tandon, Prashant Kr. Yadav, Priyal Diwakar & Sanjay Kumar </td>
+</tr>
+<tr>
+<td width = 10% ><center>22</center> </td>
+<td width = 60% ><a href="./Proceedings/Realization of Low Power Band Pass Filter Using Fully Differential Current Conveyor.pdf" target="_blank">Realization of Low Power Band Pass Filter Using Fully Differential Current Conveyor </td><td width = 30% >Shikha Sharma, Jaya Nidhi Vashishtha  </td>
+</tr>
+<tr>
+<td width = 10% ><center>23</center> </td>
+<td width = 60% ><a href="./Proceedings/Kerberos Authentication In Efficient Mobile Adhoc Environment With Clustering Mechanism.pdf" target="_blank">Kerberos Authentication In Efficient Mobile Adhoc Environment With Clustering Mechanism </td><td width = 30% > RinkiGupta, Ritu Sharma, Priya Chaudhary, Neelesh Mishra, Ankur Gupta </td>
+</tr>
+<tr>
+<td width = 10% ><center>24</center> </td>
+<td width = 60% ><a href="./Proceedings/Location of Sensor in Network-based Intrusion Detection and Prevention System.pdf" target="_blank">Location of Sensor in Network-based Intrusion Detection and Prevention System </td><td width = 30% >Reecha Mishra, Preety Tyagi, Stuti Tyagi,Nidhi Gupta  </td>
+</tr>
+<tr>
+<td width = 10% ><center>25</center> </td>
+<td width = 60% ><a href="./Proceedings/DESIGN AND DEVELOPMENT OF V+ MODEL TO WITH THE HELP OF REGRESSION TESTING.pdf" target="_blank">Design And Development Of V+ Model With The Help Of Regression Testing </td><td width = 30% >Gyanendra Kumar Nidhi  Gulati </td>
+</tr>
+<tr>
+<td width = 10% ><center>26</center> </td>
+<td width = 60% ><a href="./Proceedings/Performance testing of application server (CDAC P G I Portal) by Jmeter.pdf" target="_blank">Performance testing of application server (CDAC P G I Portal) by Jmeter </td><td width = 30% >Swati Sharma  </td>
+</tr>
+<tr>
+<td width = 10% ><center>27</center> </td>
+<td width = 60% ><a href="./Proceedings/Security access control system using-PIC8A.pdf" target="_blank">Security access control system using-PIC8A  </td><td width = 30% >Prerna Chauhan, Priya Chaudhary, Ritika Tripathi </td>
+</tr>
+<tr>
+<td width = 10% ><center>28</center> </td>
+<td width = 60% ><a href="./Proceedings/Microcontroller Based Surveillance Robot.pdf" target="_blank">Microcontroller Based Surveillance Robot  </td><td width = 30% >Navneet Mishra, Nitin Kumar Yadav, Nitish Kumar Verma,Saurabh Juyal, Shashank Srivhastava </td>
+</tr>
+<tr>
+<td width = 10% ><center>29</center> </td>
+<td width = 60% ><a href="./Proceedings/A Novel Rsa -ShamirÃ¢â‚¬â„¢s Secret Sharing Scheme For Hierarchical Key Management In WsnÃ¢â‚¬â„¢s.pdf" target="_blank">A NOVEL RSA - SHAMIR’S SECRET SHARING SCHEME FOR HIERARCHICAL KEY MANAGEMENT IN WSN’s </td><td width = 30% > Pawandeep kaur </td>
+</tr>
+<tr>
+<td width = 10% ><center>30</center> </td>
+<td width = 60% ><a href="./Proceedings/Security Issues of SIP based VoIP System.pdf" target="_blank">Security Issues of SIP based VoIP System </td><td width = 30% >Arpita Gautam, Manpreet Kaur, Rahul Sharma </td>
+</tr>
+<tr>
+<td width = 10% ><center>31</center> </td>
+<td width = 60% ><a href="./Proceedings/Zigbee.pdf" target="_blank">Zigbee : A Wireless Technology</td><td width = 30% >Amit Verma </td>
+</tr>
+<tr>
+<td width = 10% ><center>32</center> </td>
+<td width = 60% ><a href="./Proceedings/Improving Clusters reliability in Search Results using Wordnet and K-Means Algorithm.pdf" target="_blank">Improving Clusters reliability in Search Results using Wordnet and K-Means Algorithm  </td><td width = 30% >Pradeep Sharma, Nitin Choudhary </td>
+</tr>
+<tr>
+<td width = 10% ><center>33</center> </td>
+<td width = 60% ><a href="./Proceedings/Monitoring Network Congestion using Bees and SLAWAN Routing Protocols.pdf" target="_blank">Monitoring Network Congestion using Bees and SLAWAN Routing Protocols </td><td width = 30% >Sweta Verma, Rashmi Singh </td>
+</tr>
+<tr>
+<td width = 10% ><center>34</center> </td>
+<td width = 60% ><a href="./Proceedings/Advance Security System For HotelÃ¢â‚¬â„¢s.pdf" target="_blank">Advance Security System For Hotel's </td><td width = 30% >Dinesh Kumar.S, Lokesh Choudhary, Abhishek Kumar, Chandni Rastogi, Jitendra Singh </td>
+</tr>
+<tr>
+<td width = 10% ><center>35</center> </td>
+<td width = 60% ><a href="./Proceedings/Vehicle Speed Violation Detection Using RF Communication.pdf" target="_blank">Vehicle Speed Violation Detection Using RF Communication </td><td width = 30% >Ashish Shrivastava, Shivam Bhardwaj, Nitin Pachauri </td>
+</tr>
+<tr>
+<td width = 10% ><center>36</center> </td>
+<td width = 60% ><a href="./Proceedings/Symmetric Key Generation Algorithm Using Sum of Subset N-P Problem.pdf" target="_blank">Symmetric Key Generation Algorithm Using Sum of Subset N-P Problem </td><td width = 30% >Haseeb Ahmed </td>
+</tr>
+<tr>
+<td width = 10% ><center>37</center> </td>
+<td width = 60% ><a href="./Proceedings/Fault Detection in Transmission line Using MATLAB.pdf" target="_blank">Fault Detection in Transmission line Using MATLAB  </td><td width = 30% >Ahmed Sharique Anees, Akshay Kumar, Ankit Sharma, Deepika, Poonam Rajput </td>
+</tr>
+<tr>
+<td width = 10% ><center>38</center> </td>
+<td width = 60% ><a href="./Proceedings/Improved Image Encryption Using Block Based Transformation Algorithm.pdf" target="_blank">Improved Image Encryption Using Block Based Transformation Algorithm </td><td width = 30% >Richa Jai, Tauhid Ahmed, Vipin Kr. Gupta, Sanjeev Yadav </td>
+</tr>
+<tr>
+<td width = 10% ><center>39</center> </td>
+<td width = 60% ><a href="./Proceedings/Energy Efficient Rank Based Data Gathering in Wireless Sensor Networks.pdf" target="_blank">Energy Efficient Rank Based Data Gathering in Wireless Sensor Networks </td><td width = 30% >Vardaan Arora , Shashvatam, Sudhir Rai, Yasir Hilal </td>
+</tr>
+<tr>
+<td width = 10% ><center>40</center> </td>
+<td width = 60% ><a href="./Proceedings/Tolerating Single Transient Fault in Time Critical System using Energy Harvesting.pdf" target="_blank">Tolerating Single Transient Fault in Time Critical System using Energy Harvesting </td><td width = 30% >Vineeta Anand , Swasti Sharma, Vijay Verma ,Shivangi Singh  </td>
+</tr>
+<tr>
+<td width = 10% ><center>41</center> </td>
+<td width = 60% ><a href="./Proceedings/Optimized Tic-Tac Toe Game play Strategies.pdf" target="_blank">Optimized Tic-Tac Toe Game play Strategies </td><td width = 30% >Shashank Shastri, Nayika Mayuri,Vivek Singh </td>
+</tr>
+<tr>
+<td width = 10% ><center>42</center> </td>
+<td width = 60% ><a href="./Proceedings/Minutiae Based Approach for Finger Print Recognition.pdf" target="_blank">Minutiae Based Approach for Finger Print Recognition </td><td width = 30% >Apoorv Agarwal, Kunal Goel </td>
+</tr>
+<tr>
+<td width = 10% ><center>43</center> </td>
+<td width = 60% ><a href="./Proceedings/Website Monitoring Contemporary way to Test and Verify.pdf" target="_blank">Website Monitoring: Contemporary way to Test and Verify </td><td width = 30% >Suraj Goyal, Anshul Jain  </td>
+</tr>
+<tr>
+<td width = 10% ><center>44</center> </td>
+<td width = 60% ><a href="./Proceedings/A survey in Cloud Definition and Storage Technologies.pdf" target="_blank">A survey in Cloud Definition and Storage Technologies </td><td width = 30% >Vaibhav Bhatia, Meenakshi Suman, Subhadra Maurya </td>
+</tr>
+<tr>
+<td width = 10% ><center>45</center> </td>
+<td width = 60% ><a href="./Proceedings/ZigBee Based Wireless Sensor Network Application for Monitoring Health Data of Elderly People.pdf" target="_blank">ZigBee Based Wireless Sensor Network Application for Monitoring Health Data of Elderly People </td><td width = 30% >Shahida Khatoon ,Ibraheem, Sandeep Bulia, Parishram Sheel </td>
+</tr>
+<tr>
+<td width = 10% ><center>46</center> </td>
+<td width = 60% ><a href="./Proceedings/MANET.pdf" target="_blank">MANET : All you need to know about it</td><td width = 30% >Aarti Jog, Jatin Kumar, Avneet Kaur </td>
+</tr>
+<tr>
+<td width = 10% ><center>47</center> </td>
+<td width = 60% ><a href="./Proceedings/Performance Comparison Of Test Case Prioritization Search Algorithms.pdf" target="_blank">Performance Comparison Of Test Case Prioritization Search Algorithms </td><td width = 30% >Prachi Batwara, Yashika Sharma </td>
+</tr>
+<tr>
+<td width = 10% ><center>48</center> </td>
+<td width = 60% ><a href="./Proceedings/Inherent Data Processing System For Validation Of Information.pdf" target="_blank">Inherent Data Processing System For Validation Of Information  </td><td width = 30% >Sunil Kumar Mishra </td>
+</tr>
+<tr>
+<td width = 10% ><center>49</center> </td>
+<td width = 60% ><a href="./Proceedings/LI-FI the Latest Technology in Wireless.pdf" target="_blank">LI-FI the Latest Technology in Wireless </td><td width = 30% >Priyanka Dixit, Kunal Lala </td>
+</tr>
+<tr>
+<td width = 10% ><center>50</center> </td>
+<td width = 60% ><a href="./Proceedings/Approach to Blending the Frequency and Spatial Techniques for Image Enhancement.pdf" target="_blank">Approach to Blending the Frequency and Spatial Techniques for Image Enhancement </td><td width = 30% >Dr. Ravindra Kr. Purwar ,  Shweta Sharma </td>
+</tr>
+<tr>
+<td width = 10% ><center>51</center> </td>
+<td width = 60% ><a href="./Proceedings/Agile Performance Testing.pdf" target="_blank">Agile Performance Testing </td><td width = 30% >Hiba Khan </td>
+</tr>
+<tr>
+<td width = 10% ><center>52</center> </td>
+<td width = 60% ><a href="./Proceedings/Rfid- Based Parts Tracking System.pdf" target="_blank">Rfid- Based Parts Tracking System  </td><td width = 30% >Mrs. Divya Dixit </td>
+</tr>
+<tr>
+<td width = 10% ><center>53</center> </td>
+<td width = 60% ><a href="./Proceedings/Web Security using CAPTCHAA Review.pdf" target="_blank">Web Security using CAPTCHA:A Review  </td><td width = 30% >Chetan Chopra, Garima Harish </td>
+</tr>
+<tr>
+<td width = 10% ><center>54</center> </td>
+<td width = 60% ><a href="./Proceedings/Radio Frequency Identification (Rfid) The Frequency Of The Future.pdf" target="_blank">Radio Frequency Identification (Rfid) The Frequency Of The Future  </td><td width = 30% >Surbhi Arya, Shashank Pandey, Paras Chhabra, Sumit Bisht </td>
+</tr>
+<tr>
+<td width = 10% ><center>55</center> </td>
+<td width = 60% ><a href="./Proceedings/Gsm Mobile Control Robo Car.pdf" target="_blank">Gsm Mobile Control Robo Car </td><td width = 30% >Ranu Kaushik, Renuka Singh </td>
+</tr>
+<tr>
+<td width = 10% ><center>56</center> </td>
+<td width = 60% ><a href="./Proceedings/Home Appliances Control System Through Infra-red Using Mobile Devices.pdf" target="_blank">Home Appliances Control System Through Infra-red Using Mobile Devices </td><td width = 30% >Kavita, Mr. Anand Kumar Pandey </td>
+</tr>
+<tr>
+<td width = 10% ><center>57</center> </td>
+<td width = 60% ><a href="./Proceedings/Design and Implementation of Gas Leakage Security System.pdf" target="_blank">Design and Implementation of Gas Leakage Security System </td><td width = 30% >Ashish Shrivastava, Rahul Verma, Rajeev Kumar </td>
+</tr>
+<tr>
+<td width = 10% ><center>58</center> </td>
+<td width = 60% ><a href="./Proceedings/Trends in Collaborative filtering Recommendation Technique.pdf" target="_blank">Trends in Collaborative filtering Recommendation Technique  </td><td width = 30% >Nidhi Gupta </td>
+</tr>
+<tr>
+<td width = 10% ><center>59</center> </td>
+<td width = 60% ><a href="./Proceedings/Web Technology (Semantic Search System).pdf" target="_blank">Web Technology (Semantic Search System) </td><td width = 30% >Monam Sharma, Anu Varshney, Pragya </td>
+</tr>
+<tr>
+<td width = 10% ><center>60</center> </td>
+<td width = 60% ><a href="./Proceedings/GSM Enhanced GPS Based Vehicle Tracking System.pdf" target="_blank">GSM Enhanced GPS Based Vehicle Tracking System  </td><td width = 30% >Ashish Shrivastava, Noopur Sharma, Radhika Arora, Shweta Dikshit and Yamini Sharma </td>
+</tr>
+<tr>
+<td width = 10% ><center>61</center> </td>
+<td width = 60% ><a href="./Proceedings/Study of Comparison of Various Cloud Computing Simulators.pdf" target="_blank">Study of Comparison of Various Cloud Computing Simulators </td><td width = 30% >Gaganjot Kaur, Dr. Pawan Kumar </td>
+</tr>
+<tr>
+<td width = 10% ><center>62</center> </td>
+<td width = 60% ><a href="./Proceedings/A Morphological Approach for Human Skin Detection in Color Image.pdf" target="_blank">A Morphological Approach for Human Skin Detection in Color Image </td><td width = 30% >Lavanya Sharma, D. K. Yadav, Manoj Kumar </td>
+</tr>
+<tr>
+<td width = 10% ><center>63</center> </td>
+<td width = 60% ><a href="./Proceedings/Fractals in Network Traffic Engineering.pdf" target="_blank">Fractals in Network Traffic Engineering  </td><td width = 30% >Aditi Malhotra, R.C. Jain  </td>
+</tr>
+<tr>
+<td width = 10% ><center>64</center> </td>
+<td width = 60% ><a href="./Proceedings/Cryptography and Network Security.pdf" target="_blank">Cryptography and Network Security  </td><td width = 30% >Priyamvada, Sakshi </td>
+</tr>
+<tr>
+<td width = 10% ><center>65</center> </td>
+<td width = 60% ><a href="./Proceedings/Descriptive Analysis of Adaptive Neuro Fuzzy Inference System.pdf" target="_blank">Descriptive Analysis of Adaptive Neuro Fuzzy Inference System </td><td width = 30% >Rashmi Kumari Anupriya Asthana </td>
+</tr>
+<tr>
+<td width = 10% ><center>66</center> </td>
+<td width = 60% ><a href="./Proceedings/Automatic Image Grabbing By Gesture Computing Method Using Sixth Sense Technology.pdf" target="_blank">Automatic Image Grabbing By Gesture Computing Method Using Sixth Sense Technology </td><td width = 30% >Ravi Kumar, Kunal Gupta </td>
+</tr>
+<tr>
+<td width = 10% ><center>67</center> </td>
+<td width = 60% ><a href="./Proceedings/Energy and Delay Analysis of Energy-Constrained Wireless Sensor Networks Using Cooperative MIMO Techniques.pdf" target="_blank">Energy and Delay Analysis of Energy-Constrained Wireless Sensor Networks Using Cooperative MIMO Techniques </td><td width = 30% >Syed Akhtar Imam, Vibhav Kumar Sachan,Kanika Aggarwal </td>
+</tr>
+<tr>
+<td width = 10% ><center>68</center> </td>
+<td width = 60% ><a href="./Proceedings/Wireless Sensor Network Security.pdf" target="_blank">Wireless Sensor Network Security  </td><td width = 30% >Yash Sahu, Radha Dixit, Deepali Singhal </td>
+</tr>
+<tr>
+<td width = 10% ><center>69</center> </td>
+<td width = 60% ><a href="./Proceedings/A Neural Cryptography Varient A Novel Mechanism for Image Steganography using Neural Networks.pdf" target="_blank">A Neural Cryptography Varient A Novel Mechanism for Image Steganography using Neural Networks  </td><td width = 30% >Aastha Diwan, Aprajita rastogi </td>
+</tr>
+<tr>
+<td width = 10% ><center>70</center> </td>
+<td width = 60% ><a href="./Proceedings/Proportional fair switched channel scheduling Scheme for multiuser with optimal threshold.pdf" target="_blank">Proportional fair switched channel scheduling Scheme for multiuser with optimal threshold </td><td width = 30% >Rupinder kaur </td>
+</tr>
+<tr>
+<td width = 10% ><center>71</center> </td>
+<td width = 60% ><a href="./Proceedings/Open Graph Protocol with NoSQL .pdf" target="_blank">Open Graph Protocol with NoSQL : </td><td width = 30% >Aman Aggrawal, Anubha Mathur,  Manmohan Yadav, Shubham Srivastava </td>
+</tr>
+<tr>
+<td width = 10% ><center>72</center> </td>
+<td width = 60% ><a href="./Proceedings/Hybrid Intrusion Detection System based on entropy.pdf" target="_blank">Hybrid Intrusion Detection System based on entropy </td><td width = 30% >Neha chaudhary, Harivans Pratap Singh, Shailendra Mishra </td>
+</tr>
+<tr>
+<td width = 10% ><center>73</center> </td>
+<td width = 60% ><a href="./Proceedings/Implementation of CBC on S-DES using Genetic Algorithm.pdf" target="_blank">Implementation of CBC on S-DES using Genetic Algorithm </td><td width = 30% >Bhanu Arya, Abrar Ahmed Berqi, Devendra Bharti, Amit Singh Chauhan </td>
+</tr>
+<tr>
+<td width = 10% ><center>74</center> </td>
+<td width = 60% ><a href="./Proceedings/Design of Secure-IDEA (S-IDEA).pdf" target="_blank">Design of Secure-IDEA (S-IDEA) </td><td width = 30% >Harivans Pratap Singh, Sweta Verma, Shailendra Mishra </td>
+</tr>
+<tr>
+<td width = 10% ><center>75</center> </td>
+<td width = 60% ><a href="./Proceedings/Review paper Existing Security Mechanisms in MANET.pdf" target="_blank">Review paper: Existing Security Mechanisms in MANET </td><td width = 30% >Mahendra Pratap Singh, Manisha Manjul </td>
+</tr>
+<tr>
+<td width = 10% ><center>76</center> </td>
+<td width = 60% ><a href="./Proceedings/A COMPARARTIVE STUDY OF CLOUD COMPUTING.pdf" target="_blank">A COMPARARTIVE STUDY OF CLOUD COMPUTING </td><td width = 30% >Amit Gupta1, Dinesh Kumar2, Dushyant Singh3, Lav Singh4 </td>
+</tr>
+<tr>
+<td width = 10% ><center>77</center> </td>
+<td width = 60% ><a href="./Proceedings/A COMPARATIVE STUDY OF DATA MINING.pdf" target="_blank">A COMPARATIVE STUDY OF DATA MINING </td><td width = 30% >Swasti Singhal, Monika Jena </td>
+</tr>
+<tr>
+<td width = 10% ><center>78</center> </td>
+<td width = 60% ><a href="./Proceedings/Bandwidth and Signal to Ratio Comparison of 16QAM and 64QAM Techniques for OFDM.pdf" target="_blank">Bandwidth and Signal to Ratio Comparison of
+16QAM and 64QAM Techniques for OFDM </td><td width = 30% >Nitin Kumar Gupta, Vijander Singh, Asha Rani </td>
+</tr>
+<tr>
+<td width = 10% ><center>79</center> </td>
+<td width = 60% ><a href="./Proceedings/Bluetooth Based Information System for fast query response at enquiry counters.pdf" target="_blank">Bluetooth Based Information System for fast query response at enquiry counters </td><td width = 30% >Abhimanyu,Ankit Johri,Dinesh Chandra,Manish Bhardwaj </td>
+</tr>
+<tr>
+<td width = 10% ><center>80</center> </td>
+<td width = 60% ><a href="./Proceedings/COMPONENT BASED REGRESSION TESTING USING DYNAMIC SLICING ALGORITHM.pdf" target="_blank">COMPONENT BASED REGRESSION TESTING   USING DYNAMIC SLICING ALGORITHM </td><td width = 30% >SHIVANI SHARMA </td>
+</tr>
+<tr>
+<td width = 10% ><center>81</center> </td>
+<td width = 60% ><a href="./Proceedings/CONGESTION CONTROL MECHANISM IN MULTICAST.pdf" target="_blank">CONGESTION CONTROL MECHANISM IN MULTICAST </td><td width = 30% >Jyotsna, Karan Singh </td>
+</tr>
+<tr>
+<td width = 10% ><center>82</center> </td>
+<td width = 60% ><a href="./Proceedings/Detection and Resolution of Anomalies in Firewall Policy Rules.pdf" target="_blank">Detection and Resolution of Anomalies in Firewall Policy Rules </td><td width = 30% >Akanksha Singh , Amit Singh Chauhan , Arun Kumar Singh, Harnandan Prasad </td>
+</tr>
+<tr>
+<td width = 10% ><center>83</center> </td>
+<td width = 60% ><a href="./Proceedings/DNS SECURITY USING CRYPTOGRAPHIC ALGORITHM SHA-256.pdf" target="_blank">DNS SECURITY USING CRYPTOGRAPHIC ALGORITHM SHA-256 </td><td width = 30% >Sakshi Sharma, Reenu Panwar, Rakesh Sharma </td>
+</tr>
+<tr>
+<td width = 10% ><center>84</center> </td>
+<td width = 60% ><a href="./Proceedings/Encryption Algorithm Using Genetic Algorithm.pdf" target="_blank">Encryption Algorithm Using Genetic Algorithm </td><td width = 30% >Mrigank Kumar, Prakhar Mohan, Priya Kapoor, Priya Singh, Vibhanshu Singhal </td>
+</tr>
+<tr>
+<td width = 10% ><center>85</center> </td>
+<td width = 60% ><a href="./Proceedings/ENERGY OPTIMIZATION IN ROUTING PROTOCOLS OF WIRELESS SENSOR NETWORK.pdf" target="_blank">ENERGY OPTIMIZATION IN ROUTING PROTOCOLS OF WIRELESS SENSOR NETWORK </td><td width = 30% >RAHUL CHHABRA, RAHUL SHARMA, MUKUL BHARDWAJ, POOJA GARG </td>
+</tr>
+<tr>
+<td width = 10% ><center>86</center> </td>
+<td width = 60% ><a href="./Proceedings/Fault Tolerance in Wireless Sensor Networks.pdf" target="_blank">Fault Tolerance in Wireless Sensor Networks </td><td width = 30% >Paurush Agarwal, Rohit Dixit, Shipra Singh and Shivam Dubey </td>
+</tr>
+<tr>
+<td width = 10% ><center>87</center> </td>
+<td width = 60% ><a href="./Proceedings/FUZZY BASED TRAFFIC CONTROLLER.pdf" target="_blank">FUZZY BASED TRAFFIC CONTROLLER </td><td width = 30% >Amit Rai, Prem Prateek,Rahul Sharma,Ravi Kumar, Satyendra Kr. Satyarthi </td>
+</tr>
+<tr>
+<td width = 10% ><center>88</center> </td>
+<td width = 60% ><a href="./Proceedings/Handling Security Issues In Cloud Computing Using Tiny Algorithm.pdf" target="_blank">Handling Security Issues In Cloud Computing Using Tiny Algorithm </td><td width = 30% >Rishabh Jaiswal , Ravi Ranjan Katiyar, Nitish Shekhar , Rishi Shukla </td>
+</tr>
+<tr>
+<td width = 10% ><center>89</center> </td>
+<td width = 60% ><a href="./Proceedings/Healthcare Service Sector Classifying and Finding Diabetes spread pattern and pre determination in Northern India Using Data Mining Techniques.pdf" target="_blank">Healthcare Service Sector: Classifying and Finding Diabetes spread pattern and pre determination in Northern India Using Data Mining Techniques </td><td width = 30% >Vineet Jain, Utkarsh and Hemant Arora </td>
+</tr>
+<tr>
+<td width = 10% ><center>90</center> </td>
+<td width = 60% ><a href="./Proceedings/NEWTON-RAPHSON METHOD FOR POWER FLOW EQUATIONS IN MATLAB ENVIRONMENT.pdf" target="_blank">NEWTON-RAPHSON METHOD FOR POWER FLOW EQUATIONS IN MATLAB ENVIRONMENT </td><td width = 30% >Bijender Kumar1 , Rahul Kumar Dwivedi2, Yasir Khan3, Shashank Tomar4 and  Shatanand Sharma5 </td>
+</tr>
+<tr>
+<td width = 10% ><center>91</center> </td>
+<td width = 60% ><a href="./Proceedings/Node clustering using K Means Clustering in Wireless Sensor Networking K Means Clustering in WSN.pdf" target="_blank">Node clustering using K Means Clustering in Wireless Sensor Networking
+K Means Clustering in WSN
+ </td><td width = 30% >PALLAVI MATHUR, SOUMYA SAXENA, MEGHNA BHARDWAJ </td>
+</tr>
+<tr>
+<td width = 10% ><center>92</center> </td>
+<td width = 60% ><a href="./Proceedings/Optimization of Opportunistic Multicast Routing Protocol.pdf" target="_blank">Optimization of Opportunistic Multicast Routing Protocol </td><td width = 30% >Abhishek Kumar Singh1, Alisha Dave2, Ankur Mani Tripathi3, Mamtesh Kumar4 </td>
+</tr>
+<tr>
+<td width = 10% ><center>93</center> </td>
+<td width = 60% ><a href="./Proceedings/Performance Evaluation of Electromagnetic Wave Propagation in Random Media.pdf" target="_blank">Performance Evaluation of Electromagnetic Wave Propagation in Random Media  </td><td width = 30% >Nitesh Kumar Shukla, Harish Parthsarty </td>
+</tr>
+<tr>
+<td width = 10% ><center>94</center> </td>
+<td width = 60% ><a href="./Proceedings/REDUCE THE SCANNING OF DATABASE IN APRIORI ALGORTHIM USING DISCONNECTED APPROACH.pdf" target="_blank">REDUCE THE SCANNING OF DATABASE IN APRIORI ALGORTHIM USING DISCONNECTED APPROACH  </td><td width = 30% >Rajneesh Kumar Singh, Jawed Ahmed, Manoj Kumar Pandey </td>
+</tr>
+<tr>
+<td width = 10% ><center>95</center> </td>
+<td width = 60% ><a href="./Proceedings/Route Discovery of AODV And DSR in MANET.pdf" target="_blank">Route Discovery of AODV And DSR in MANET </td><td width = 30% >Anurag Kushwaha1, Ashish Kumar Singh2, Danish Khan3, Dheeraj Shukla4 </td>
+</tr>
+<tr>
+<td width = 10% ><center>96</center> </td>
+<td width = 60% ><a href="./Proceedings/SEARCHING IN PEER TO PEER NETWORKS.pdf" target="_blank">SEARCHING IN PEER TO PEER NETWORKS </td><td width = 30% >Aisha Rafat1,Manika Sharma2,Ashish Kumar3, Faiza Zakir4 </td>
+</tr>
+<tr>
+<td width = 10% ><center>97</center> </td>
+<td width = 60% ><a href="./Proceedings/Semantic Web Mining.pdf" target="_blank">Semantic Web Mining </td><td width = 30% >Vidushi Singh,Shaurya Pratap Singh,Shubham Singh, Tej Prakash Gautam </td>
+</tr>
+<tr>
+<td width = 10% ><center>98</center> </td>
+<td width = 60% ><a href="./Proceedings/Symmetric Cryptography and Eigen values Based Spectrum Sensing in Cognitive Radio Networks.pdf" target="_blank">Symmetric Cryptography and Eigen values Based Spectrum Sensing in Cognitive Radio Networks </td><td width = 30% >1Sugandh Gupta, 2Sandip Vijay  </td>
+</tr>
+<tr>
+<td width = 10% ><center>99</center> </td>
+<td width = 60% ><a href="./Proceedings/Symmetric Cryptography based on Extended Genetic Algorithm.pdf" target="_blank">Symmetric Cryptography based on Extended Genetic Algorithm </td><td width = 30% >Anshu Arora1, Himanshu Shekhar2, Janahvi Shukla3, Kumar Priybhash Singh4 </td>
+</tr>
+<tr>
+<td width = 10% ><center>100</center> </td>
+<td width = 60% ><a href="./Proceedings/Tense Conversion in NLP with focus on finding the verb and obtaining its root form.pdf" target="_blank">Tense Conversion in NLP with focus on finding the
+verb and obtaining its root form </td><td width = 30% >Abdul Raheem  Usmani,Chayan Pandey, Nupur Agrawal , Prakriti Gautam </td>
+</tr>
+<tr>
+<td width = 10% ><center>101</center> </td>
+<td width = 60% ><a href="./Proceedings/VIRTUAL BROWSER PLUS.pdf" target="_blank">VIRTUAL BROWSER PLUS </td><td width = 30% >Ambarish Kumar Gupta,  Anuj Singh, Anoop Rai </td>
+</tr>
+<tr>
+<td width = 10% ><center>102</center> </td>
+<td width = 60% ><a href="./Proceedings/EEG Feature Extraction for classifying Human Emotions Using Sensors.pdf" target="_blank">EEG Feature Extraction for classifying Human Emotions Using Sensors </td><td width = 30% >JYOTI GUPTA, DR.MANOJ BANDIL, MR.DBV SINGH </td>
+</tr></tbody>
+</table>
+</div>
+
+
+
+</body></html>

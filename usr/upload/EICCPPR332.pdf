@@ -1,0 +1,142 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Compass Consultants</title>
+<link href="css/style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+<div id="wapper">
+<div id="mainhome">
+<div class="mainhome">
+<div id="header">
+<div class="logo"><a href="index.html"><img src="images/logo.jpg" width="244" height="85" alt="" /></a></div>
+<div class="header_right">
+<div class="header_nav">
+<ul>
+<li><a href="#"> 150 2nd St SW </a></li>
+<li><a href="#">Perham, MN 56573 </a></li>
+<li><a href="#" class="activ" >218.346.3600</a></li>
+</ul>
+</div>
+<div class="search">
+  <input type="text" name="input"  class="input" />
+  <input type="submit" name="Search" class="submit" /> 
+  </div>
+<div class="nav">
+<ul>
+
+<li><a href="#" class="activ">Home</a></li>
+<li><a href="#"> About</a></li>
+ <li><a href="#">Experience</a></li>
+ <li><a href="#"> Servicer</a></li>
+  <li><a href="#">Carees</a></li>
+   <li><a href="#">Contct</a></li>
+
+</ul>
+</div>
+ </div>
+ </div>
+<!---->
+<div class="banner_div"></div>
+
+<div class="maddil">
+<div class="maddil_left">
+<div class="text">
+<ul>
+
+ENGINEERING SERVICES
+<li><a href="#">Telecom Engineering</a> </li>
+<li><a href="#">Data Engineering</a></li>
+<li><a href="#">Video Engineering</a></li>
+<li><a href="#">Energy Engineering</a></li>
+<li><a href="#">Wireless Engineering</a></li>
+<li><a href="#">COE Engineering</a></li>
+<li><a href="#">Outside Plant Engineering</a></li>
+
+</ul>
+</div>
+<div class="text1">
+<ul>
+CONSULTING SERVICES
+<li><a href="#">Project Management</a></li>
+<li><a href="#">Environmental Regulatory</a></li> 
+<li><a href="#">Feasibility Studies</a></li>
+<li><a href="#">Land Surveying & Mapping</a></li>
+
+</ul>
+</div>
+
+</div>
+
+<!---->
+<div class="maddil_right">
+<div class="text_right">
+<h2> Telecom Engineering</h2>
+<p> The rapid pace of change in central office equipment is one of many challenges for telecommunications companies today. As companies make the decision to migrate from the PSTN to end-to-end IP drivers like competitiveness and business opportunity need to be balanced with issues like interoperability and back office integration. We’ll analyze and present your options in a way that makes you feel confident in your investment and positions your company to keep pace with the future.</p>
+<h3> We Trust Compass:</h3>
+<p> “The assistance provided by key individuals from your firm with the addition of our new Next Generation Switch has been invaluable to my team in the ACS Central Office Department. This has been an extraordinary undertaking for us and CC&I has been there to help out in every corner of the project; from the initial proposal, to network layout and design, problem tracking and resolution, trunk ordering, and serving as our primary Qwest liaison. Based on this experience I would recommend CC&I to any other company who is considering a similar project.”</p>
+<p class="arvig">Vince Bachmann, Central Office Lead Technician, Arvig </p>
+</div>
+<!---->
+<div class="text_img">
+  <img src="images/img.jpg" width="195" height="206" alt="" />
+  <p>Di od ut que porerrum quis is sus es plab il id magnihit modi ut eum et odicatus aut anda volorentiaes magnam alit ento blatur solupta nime pra nis aut quias ut aut fugit, sitenihil mo etum vel etur.</p>
+  </div>
+</div>
+
+</div>
+
+
+
+
+
+<div class="footer">
+<div class="footer_left">
+<ul>
+<li><a href="#">HOME</a></li>
+<li><a href="#">ABOUT US</a></li>
+<li>VISION</li>
+<li>MANAGEMENT TEAM</li>
+<li>>NEWS & EVENTS</li>
+<li>>ORGANIZATIONS</li>
+</ul>
+<ul>
+<li><a href="#">EXPERIENCE</a></li>
+<li><a href="#">SERVICES</a></li>
+<li>Telecom Engineering</li>
+<li>Data Engineering</li>
+<li>Video Engineering</li>
+<li>Energy Engineering</li>
+<li>Wireless Engineering</li>
+</ul>
+
+<ul>
+
+<li>COE Engineering</li>
+<li>Outside Plant Engineering</li>
+<li>project Management</li>
+<li>Environmental Regulatory Services</li>
+<li>Feasibility Studies</li>
+<li>Land Surveying & Mapping</li>
+<li><a href="#">CAREERS</a></li>
+</ul>
+
+<ul>
+
+<li><a href="#">CONTACT US</a></li>
+<p>Minnesota Office: 150 2nd St SW
+Perham, MN 56573</p>
+<p class="ctiv">218.346.3600</p>
+<img src="images/logo1.jpg" width="203" height="66" alt="" align="right"/>
+</ul>
+
+</div>
+
+</div>
+</div>
+</div>
+</div>
+</body>
+</html>

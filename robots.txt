@@ -1,0 +1,13 @@
+# robots.txt file created at http://www.searchenginepromotionhelp.com/
+# Sat, 16 Mar 2013 10:07:06 +0000
+
+# Exclude Files From All Robots:
+
+User-agent: *
+Disallow: /usr/upload/
+Disallow: /editor/
+
+
+
+
+# End robots.txt file

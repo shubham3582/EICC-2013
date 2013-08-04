@@ -1,0 +1,16 @@
+# The below FilesMatch stanza was added by your
+#  hosting provider on 2013-06-26 12:46:04
+#  to resolve a potential Apache 2.4
+#  compatibility issue with your custom AddHandler(s)
+#  for PHP.  If you feel this was in error, please
+#  contact support and we will work to resolve the
+#  issue.  Thanks!
+<FilesMatch "\.(htm|html)$">
+  Options +ExecCGI
+</FilesMatch>
+
+RewriteEngine on
+RewriteBase /
+RewriteCond %{SCRIPT_FILENAME} !-d
+RewriteCond %{SCRIPT_FILENAME} !-f
+RewriteRule ^(.*)$ $1.php [L,QSA]
