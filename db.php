@@ -2,9 +2,9 @@
  
 //*********Server Information to establish a connection ******
  
-$host = '182.50.133.55'; // Server Host Name
+$host = 'localhost'; // Server Host Name
 $user = 'eiccitorg'; // Server User Name
-$password = 'Galgotia@54321'; // Server Password
+$password = ''; // Server Password
 $db = 'eiccitorg'; // Your Database
  
 //=======following function to establish a connection with server========================
